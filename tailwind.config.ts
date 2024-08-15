@@ -23,6 +23,7 @@ const config: Config = {
       },
       colors: {
         primary: '#1F1F1F',
+        highlight: '#EEE8EA'
       },
       opacity: {
         30: '0.3',
