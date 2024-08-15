@@ -22,16 +22,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageSrc, title, description,
       rel="noopener noreferrer" 
       className="col-span-2 relative group overflow-hidden"
     >
-      <Image
-        src={imageSrc}
-        alt={title}
-        width={600}
-        height={400}
-        className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-        layout="responsive"
-      />
-      {/* Máscara escura que se move da direita para a esquerda */}
-      <div className="absolute inset-0 bg-black opacity-30 transition-transform duration-500 ease-in-out group-hover:translate-x-[-100%]"></div>
+      <div className="relative w-full h-0 pb-[56.25%]">
+        <Image
+          src={imageSrc}
+          alt={title}
+          className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+          fill
+        />
+        {/* Máscara escura que se move da direita para a esquerda */}
+        <div className="absolute inset-0 bg-black opacity-30 transition-transform duration-500 ease-in-out group-hover:translate-x-[-100%]"></div>
+      </div>
     </a>
 
     {/* Título do projeto */}
