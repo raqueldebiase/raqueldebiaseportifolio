@@ -1,4 +1,3 @@
-// src/components/molecules/ProjectCard.tsx
 import React from 'react';
 import Image from 'next/image';
 import Button from '../atoms/Button';
@@ -14,13 +13,13 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ imageSrc, title, description, technologies, githubLink, link }) => (
-  <div className="grid grid-cols-3 grid-rows-1 gap-4">
-    {/* Imagem ocupa as duas primeiras colunas */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {/* Imagem ocupa as duas primeiras colunas no desktop, e a coluna inteira no mobile */}
     <a 
       href={link} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="col-span-2 relative group overflow-hidden"
+      className="relative group col-span-1 md:col-span-2 overflow-hidden"
     >
       <div className="relative w-full h-0 pb-[56.25%]">
         <Image
@@ -35,22 +34,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageSrc, title, description,
     </a>
 
     {/* Título do projeto */}
-    <div className="col-span-1 row-span-1 flex items-end border-b-2 border-primary px-2">
-      <h3 className="text-3xl mb-2">{title}</h3>
+    <div className="col-span-1 md:col-span-1 flex items-end border-b-2 border-primary px-2">
+      <h3 className="text-2xl md:text-3xl mb-2">{title}</h3>
     </div>
+
     <div className="col-span-1 row-span-1"></div>
     <div className="col-span-1 row-span-1"></div>
 
     {/* Conteúdo ocupa a última coluna */}
-    <div className="col-span-1 px-2 my-6 py-4 flex flex-col justify-between">
-      <p className="text-gray-700 mb-4">{description}</p>
-      <div className="my-8 flex justify-between items-center flex-wrap">
-        <div>
+    <div className="col-span-1 md:col-span-1 px-2 my-0 md:my-6 py-0 md:py-4 flex flex-col justify-between">
+      <p className="text-gray-700 mb-4 text-sm md:text-base">{description}</p>
+      <div className="my-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
             <Tag key={index} tech={tech} />
           ))}
         </div>
-        <Button href={githubLink} className="self-start">View on GitHub</Button>
+        <Button href={githubLink} className=" self-end md:self-start">View on GitHub</Button>
       </div>
     </div>
   </div>
