@@ -41,8 +41,8 @@ const projects = [
 ];
 
 const ProjectsSection: React.FC = () => (
-  <section className="py-12" id="projects">
-    <h2 className="text-4xl text-center my-16 md:my-24">Projects.</h2>
+  <section className="" id="projects">
+    <h2 className="text-4xl font-thin text-center my-16 md:my-24">Projects.</h2>
     <div className="grid grid-cols-1 gap-24">
       {projects.map((project, index) => (
         <ProjectCard
