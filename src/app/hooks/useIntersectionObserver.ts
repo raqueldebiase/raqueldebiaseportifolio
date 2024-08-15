@@ -1,31 +1,29 @@
-// src/hooks/useIntersectionObserver.ts
 import { useEffect, useState } from 'react';
 
-const useIntersectionObserver = (ref: React.RefObject<HTMLElement>) => {
-  const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
+const useIntersectionObserver = (ref: React.RefObject<Element>): boolean => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const currentElement = ref.current; // Captura o valor de ref.current
+    if (!currentElement) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
+        setIsVisible(entry.isIntersecting);
       },
-      {
-        threshold: 0.5, // Ajuste o threshold conforme necessário
-      }
+      { threshold: 0.1 } // Ajuste o threshold conforme necessário
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(currentElement);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
-  }, [ref]);
+  }, [ref]); // Recomendado: Observe `ref` se o ref puder mudar
 
-  return isIntersecting;
+  return isVisible;
 };
 
 export default useIntersectionObserver;

@@ -38,12 +38,10 @@ const Hero = () => {
 
       {/* Quarta Seção */}
       <div className="flex flex-col items-end text-end md:items-end md:text-end">
-        <p
-          ref={textRef}
-          className={`text-3xl md:text-4xl my-16 font-thin ${isVisible ? 'highlight' : ''}`}
-        >
-          Hello! I'm Raquel, a frontend developer passionate about transforming ideas into impactful digital experiences. With a keen eye for design and strong <span className={`highlight ${isVisible ? 'animate-background' : ''}`}>web development</span> skills, I create intuitive and <span className={`highlight ${isVisible ? 'animate-background' : ''}`}>responsive interfaces</span> that delight users. Let's work together to bring your next project to life!
-        </p>
+      <p ref={textRef} className={`text-3xl md:text-4xl my-16 font-thin relative overflow-hidden ${isVisible ? 'highlight' : ''}`}>
+  Hello! I&apos;m Raquel, a frontend developer passionate about transforming ideas into impactful digital experiences. With a keen eye for design and strong <span className={`relative ${isVisible ? 'animate-background' : ''}`}>web development</span> skills, I create intuitive and <span className={`relative ${isVisible ? 'animate-background' : ''}`}>responsive interfaces</span> that delight users. Let&apos;s work together to bring your next project to life!
+</p>
+
       </div>
     </div>
   );
