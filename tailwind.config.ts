@@ -25,6 +25,7 @@ const config: Config = {
         primary: '#1F1F1F',
       },
       opacity: {
+        30: '0.3',
         50: '0.5',
         70: '0.7',
       },
