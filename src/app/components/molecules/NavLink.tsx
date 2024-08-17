@@ -25,10 +25,11 @@ const NavLinks = () => {
 
       {/* Mobile Menu */}
       <nav
-        className={`fixed top-0 right-0 w-full bg-primary text-white transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:static md:flex md:flex-row md:gap-24 md:translate-x-0 md:bg-transparent md:w-auto`}
-      >
+  className={`fixed top-0 right-0 w-full bg-primary text-white transform transition-transform duration-300 ease-in-out flex items-start justify-between flex-direction-row-reverse ${
+    isOpen ? 'translate-x-0' : 'translate-x-full'
+  } md:static md:flex md:flex-row md:gap-24 md:translate-x-0 md:bg-transparent md:w-auto`}
+>
+
         <div className="flex justify-end items-center p-4 md:hidden">
           <button onClick={toggleMenu} aria-label="Close menu">
             <FiX className="text-white text-3xl" />
