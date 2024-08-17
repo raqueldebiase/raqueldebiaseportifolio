@@ -26,6 +26,7 @@ const config: Config = {
         highlight: '#EEE8EA'
       },
       opacity: {
+        10: '0.1',
         30: '0.3',
         50: '0.5',
         70: '0.7',
