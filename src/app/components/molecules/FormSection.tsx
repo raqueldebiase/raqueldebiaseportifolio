@@ -77,8 +77,8 @@ const FormSection = () => {
           {status === 'sending' ? 'Sending...' : 'Send'}
         </ButtonSend>
       </div>
-      {status === 'success' && <p className="text-green-500 mt-4">Message sent successfully!</p>}
-      {status === 'error' && <p className="text-red-500 mt-4">There was an error sending your message. Please try again.</p>}
+      {status === 'success' && <p className="text-green-500 text-center mt-4">Message sent successfully!</p>}
+      {status === 'error' && <p className="text-red-500 texte-center mt-4">There was an error sending your message. Please try again.</p>}
     </form>
   );
 };

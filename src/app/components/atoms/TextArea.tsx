@@ -1,4 +1,3 @@
-// src/components/atoms/TextArea.tsx
 import React from 'react';
 
 interface TextAreaProps {
@@ -7,15 +6,17 @@ interface TextAreaProps {
   label: string;
   rows: number;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ id, placeholder, label, rows }) => (
+const TextArea: React.FC<TextAreaProps> = ({ id, placeholder, label, rows, value, onChange }) => (
   <div className="relative py-8">
     <textarea
       id={id}
       rows={rows}
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
       className="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white placeholder-transparent focus:outline-none peer"
     />
     <label

@@ -1,4 +1,3 @@
-// src/components/atoms/InputField.tsx
 import React from 'react';
 
 interface InputFieldProps {
@@ -10,12 +9,14 @@ interface InputFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ id, type, placeholder, label }) => (
+const InputField: React.FC<InputFieldProps> = ({ id, type, placeholder, label, value, onChange }) => (
   <div className="relative py-8">
     <input
       id={id}
       type={type}
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
       className="w-full px-4 py-2 border-b-2 border-white bg-transparent text-white placeholder-transparent focus:outline-none peer"
     />
     <label
