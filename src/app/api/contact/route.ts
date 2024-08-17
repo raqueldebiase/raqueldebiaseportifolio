@@ -1,16 +1,20 @@
 import { NextResponse } from 'next/server';
+import client from '@/app/lib/db';
 
-// O método POST lida com a submissão do formulário
 export async function POST(request: Request) {
   const { name, email, message } = await request.json();
 
-  // Aqui você pode adicionar a lógica para processar os dados do formulário,
-  // como enviar um email ou armazenar os dados em um banco de dados.
+  try {
+    // Insira os dados no banco de dados
+    await client.query(
+      'INSERT INTO messages (name, email, message) VALUES ($1, $2, $3)',
+      [name, email, message]
+    );
 
-  console.log('Received message:', { name, email, message });
-
-  // Retornar uma resposta de sucesso
-  return NextResponse.json({ success: true });
+    // Retornar uma resposta de sucesso
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('Database insert error:', error);
+    return NextResponse.json({ success: false, error: 'Database insert failed' });
+  }
 }
-
-// Você pode adicionar outros métodos, como GET, se necessário

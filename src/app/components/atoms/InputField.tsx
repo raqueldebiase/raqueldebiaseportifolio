@@ -6,6 +6,8 @@ interface InputFieldProps {
   type: string;
   placeholder: string;
   label: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputField: React.FC<InputFieldProps> = ({ id, type, placeholder, label }) => (

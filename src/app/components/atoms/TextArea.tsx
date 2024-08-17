@@ -6,6 +6,8 @@ interface TextAreaProps {
   placeholder: string;
   label: string;
   rows: number;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const TextArea: React.FC<TextAreaProps> = ({ id, placeholder, label, rows }) => (
