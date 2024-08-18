@@ -9,7 +9,7 @@ const Contacts = () => {
     <div className="bg-primary w-full flex flex-col justify-center items-center" id="contacts">
       <div className="text-center">
         <h2 className="text-4xl font-thin text-white pt-16 pb-4">Contacts.</h2>
-        <p className="text-2xl font-thin text-white">Let's talk about!</p>
+        <h3 className="text-2xl font-thin text-white">Let's talk about!</h3>
       </div>
       <FormSection />
       <div className="mt-8 flex flex-col justify-center items-center gap-4">

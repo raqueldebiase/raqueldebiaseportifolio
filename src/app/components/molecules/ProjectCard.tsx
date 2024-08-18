@@ -25,10 +25,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageSrc, title, description,
         <Image
           src={imageSrc}
           alt={title}
+          fill // Novo atributo que substitui o layout="fill"
           className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-          fill
         />
-        {/* Máscara escura que se move da direita para a esquerda */}
         <div className="absolute inset-0 bg-black opacity-10 transition-transform duration-500 ease-in-out group-hover:translate-x-[-100%]"></div>
       </div>
     </a>
