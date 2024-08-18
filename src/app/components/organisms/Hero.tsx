@@ -31,8 +31,8 @@ const Hero = () => {
       <div className="hidden md:block"></div>
 
       <div className="flex flex-col items-end text-end md:items-end md:text-end">
-        <p className={`text-3xl md:text-4xl my-8 font-thin relative overflow-hidden`}>
-          Hello! I&apos;m Raquel, a frontend developer passionate about transforming ideas into impactful digital experiences. With a keen eye for design and strong <span className={`relative`}>web development</span> skills, I create intuitive and <span className={`relative`}>responsive interfaces</span> that delight users. Let&apos;s work together to bring your next project to life!
+        <p className={`text-2xl md:text-3xl my-8 font-thin relative overflow-hidden`}>
+         With three years of experience in web development, I am deeply passionate about integrating cutting-edge technologies, design principles, accessibility, and thorough documentation. As a Frontend Developer, my goal is to harmonize web tools with user needs by applying theories from visual arts and information science. I strive to create intuitive and engaging user experiences that are both aesthetically pleasing and highly functional.
         </p>
       </div>
     </div>
