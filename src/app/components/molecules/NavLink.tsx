@@ -40,6 +40,7 @@ const NavLinks = () => {
           <Link href="#projects" onClick={toggleMenu}>projects</Link>
           <Link href="#contacts" onClick={toggleMenu}>contacts</Link>
           <Link href="https://github.com/raqueldebiase/" target="_blank" onClick={toggleMenu}>github</Link>
+          <Link href="/coverletter.pdf" download="RaquelDebiase_CV.pdf" onClick={toggleMenu}>Download CV</Link>
         </div>
       </nav>
     </>
