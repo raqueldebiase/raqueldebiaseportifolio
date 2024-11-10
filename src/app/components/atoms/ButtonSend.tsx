@@ -2,10 +2,10 @@
 import React from 'react';
 
 interface ButtonSendProps {
-  type?: 'button' | 'submit' | 'reset'; // Adicione o tipo do botão para uso no formulário
-  onClick?: () => void; // Adicione uma função onClick se necessário
-  className?: string; // Adicione classe opcional para estilos adicionais
-  children: React.ReactNode; // Adicione children para o texto do botão
+  type?: 'button' | 'submit' | 'reset'; 
+  onClick?: () => void;
+  className?: string; 
+  children: React.ReactNode; 
 }
 
 const ButtonSend: React.FC<ButtonSendProps> = ({

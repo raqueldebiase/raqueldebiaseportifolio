@@ -6,13 +6,13 @@ import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 const SocialLinks: React.FC = () => (
   <div className="flex space-x-4">
     <SocialLink 
-      href="https://www.linkedin.com/in/seu-perfil" 
+      href="https://www.linkedin.com/in/raqueldebiase/" 
       icon={<FaLinkedin size={36} />} 
       label="LinkedIn"
       className="hover:scale-110"
     />
     <SocialLink 
-      href="https://github.com/seu-usuario" 
+      href="https://github.com/raqueldebiase" 
       icon={<FaGithub size={36} />} 
       label="GitHub"
       className="hover:scale-110"
